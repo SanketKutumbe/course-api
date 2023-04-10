@@ -25,17 +25,17 @@ public class TopicController {
         return topicService.getTopic(id);
     }
 
-    @RequestMapping(method=RequestMethod.POST, value = "/topic")
+    @RequestMapping(method=RequestMethod.POST, value = "/topics")
     public void addTopic(@RequestBody Topic t){
         topicService.addTopic(t);
     }
 
-    @RequestMapping(method=RequestMethod.DELETE, value="/topic/{id}")
+    @RequestMapping(method=RequestMethod.DELETE, value="/topics/{id}")
     public void deleteTopic(@PathVariable String id){
         topicService.deleteTopic(id);
     }
 
-    @RequestMapping(method=RequestMethod.PUT, value="/topic/{id}")
+    @RequestMapping(method=RequestMethod.PUT, value="/topics/{id}")
     public void updateTopic(@RequestBody Topic t, @PathVariable String id){
         topicService.updateTopic(t,id);
     }
