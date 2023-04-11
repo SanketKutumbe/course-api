@@ -1,7 +1,7 @@
-package org.sanket.springboot.courseapi.service;
+package org.sanket.springboot.topicapi.service;
 
-import org.sanket.springboot.courseapi.dao.Topic;
-import org.sanket.springboot.courseapi.database.TopicRepository;
+import org.sanket.springboot.topicapi.dao.Topic;
+import org.sanket.springboot.topicapi.database.TopicRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,11 +14,7 @@ public class TopicService {
 
     @Autowired
     private TopicRepository topicRepository;
-    private List<Topic> list = new ArrayList<>(Arrays.asList(
-            new Topic("1", "Java", "Computer programming language"),
-            new Topic("2", "Javascript", "Computer scripting language"),
-            new Topic("1", "HTML", "Computer markup language")
-    ));
+
 
     public List<Topic> getAllTopics(){
 
@@ -28,16 +24,14 @@ public class TopicService {
     }
 
     public Topic getTopic(String id){
-        return list.stream().filter( t -> t.getId().equals(id)).findFirst().get();
+        return topicRepository.findById(id).get();
     }
 
     public void addTopic(Topic t){
-
         topicRepository.save(t);
     }
 
     public void deleteTopic(String id){
-
         topicRepository.deleteById(id);
     }
 

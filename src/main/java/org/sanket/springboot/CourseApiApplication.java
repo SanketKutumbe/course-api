@@ -1,4 +1,4 @@
-package org.sanket.springboot.courseapi;
+package org.sanket.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

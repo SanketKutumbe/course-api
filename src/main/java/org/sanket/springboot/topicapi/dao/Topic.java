@@ -1,4 +1,4 @@
-package org.sanket.springboot.courseapi.dao;
+package org.sanket.springboot.topicapi.dao;
 
 
 import javax.persistence.Entity;
@@ -12,8 +12,8 @@ public class Topic {
     private String name;
     private String desc;
 
-    public Topic(){}
     public Topic(String id, String name, String desc) {
+        super();
         this.id = id;
         this.name = name;
         this.desc = desc;

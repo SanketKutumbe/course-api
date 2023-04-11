@@ -1,13 +1,11 @@
-package org.sanket.springboot.courseapi.controller;
+package org.sanket.springboot.topicapi.controller;
 
-import org.sanket.springboot.courseapi.service.TopicService;
+import org.sanket.springboot.topicapi.service.TopicService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.kafka.KafkaProperties;
 import org.springframework.web.bind.annotation.*;
 
-import org.sanket.springboot.courseapi.dao.Topic;
+import org.sanket.springboot.topicapi.dao.Topic;
 
-import java.util.Arrays;
 import java.util.List;
 
 @RestController
